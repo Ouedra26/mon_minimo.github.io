@@ -1,0 +1,394 @@
+/* style class general */
+
+:root {
+    --gris-section: rgb(233, 233, 233);
+    --gris-moyen-h2: rgb(155, 155, 155);
+    --gris-p-h3: rgb(90, 90, 90);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+.bg-gris {
+    background-color: var(--gris-section);
+}
+
+img {
+    max-width: 100%;
+    /* largeur maximun de l'image et la taille de son parent */
+}
+
+
+/* header le style */
+
+header {
+    display: flex;
+    /* utilise le flex */
+    justify-content: space-between;
+    /* on ecarte les partie qui compose le header */
+    height: 100px;
+    /* on donne une hauteur */
+    align-items: center;
+    /* on aligne les element verticalement */
+}
+
+h1 {
+    font-family: "IBM Plex", sans-serif;
+    letter-spacing: 5px;
+}
+
+header nav a {
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--gris-p-h3);
+    margin-left: 5px;
+    transition: 1s ease;
+}
+
+header nav a:hover {
+    background-color: var(--gris-p-h3);
+    color: white;
+}
+
+header nav a:first-of-type {
+    margin-left: 0;
+}
+
+
+/* partie principale */
+
+h2,
+.col-12 a:last-of-type {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--gris-moyen-h2);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: smaller;
+    text-decoration: none;
+}
+
+.new {
+    margin: auto;
+    text-align: center !important;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--gris-p-h3);
+}
+
+.row p {
+    color: var(--gris-p-h3);
+    line-height: 22px;
+    font-size: 17px;
+}
+
+
+/* formulaire */
+
+#formulaire {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.max-auto {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#formulaire h3 {
+    margin-top: 0;
+}
+
+#formulaire input {
+    border: none;
+    border-bottom: 2px solid var(--gris-p-h3);
+    background: transparent;
+    padding: 5px;
+}
+
+#formulaire input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--gris-p-h3);
+}
+
+#formulaire input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--gris-p-h3);
+}
+
+#formulaire button {
+    bottom: none;
+    background: transparent;
+}
+
+#formulaire button i {
+    font-size: large;
+}
+
+
+/* Load more */
+
+.btnPlus {
+    margin: 60px auto;
+    border: 2px rgb(90, 90, 90);
+    padding: 10px 20px;
+}
+
+.btnPlus a {
+    transition: 2s ease;
+    font-size: 16px;
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+}
+
+.btnPlus a:hover {
+    background-color: orange;
+}
+
+.fleche {
+    font-size: 350%;
+    background: transparent;
+    /* border: none; */
+    color: rgb(206, 210, 213);
+    /* la position du bouton */
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(90, 90, 90);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    padding-left: 15px;
+}
+
+
+/* debut colonne cree une rangée*/
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    width: 8.33333%;
+    padding: 25px;
+}
+
+.col-2 {
+    width: 16.66666%;
+    padding: 25px;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 25px;
+}
+
+.col-4 {
+    width: 33.33333%;
+    padding: 25px;
+}
+
+.col-5 {
+    width: 41.66666%;
+    padding: 25px;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 25px;
+}
+
+.col-7 {
+    width: 58.33333%;
+    padding: 25px;
+}
+
+.col-8 {
+    width: 66.66666%;
+    padding: 25px;
+}
+
+.col-9 {
+    width: 75%;
+    padding: 25px;
+}
+
+.col-10 {
+    width: 83.33333%;
+    padding: 25px;
+}
+
+.col-11 {
+    width: 91.66666%;
+    padding: 25px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 25px;
+}
+
+
+/* fin style colonne */
+
+
+/* style */
+
+
+/* MEDIA QUERIES */
+
+
+/* TABLETTE */
+
+@media screen and (max-width: 991px) {
+    .container {
+        width: 90%;
+    }
+    header {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+    }
+    nav a {
+        color: white;
+        margin-bottom: 2px;
+        background-color: white;
+    }
+    header nav a:hover {
+        color: orange;
+    }
+    h2,
+    .col-12 a:last-of-type {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: var(--gris-moyen-h2);
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: smaller;
+        text-decoration: none;
+    }
+    .new {
+        margin: auto !important;
+        text-align: center !important;
+    }
+    h3 {
+        margin: 45px !important;
+        text-align: center !important;
+        font-size: xx-large;
+        font-weight: 500;
+        line-height: 18px;
+        color: var(--gris-p-h3);
+    }
+    .row img {
+        width: 100% !important;
+    }
+    .row p {
+        margin: auto;
+        color: var(--gris-p-h3);
+        line-height: 22px;
+        font-size: 17px;
+    }
+    .fleche {
+        right: 20px;
+    }
+    .col-6 {
+        width: 100%;
+    }
+    footer {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 760px) {
+    .container {
+        width: 360px;
+    }
+    /* header le style */
+    header {
+        justify-content: space-between;
+        /* on ecarte les partie qui compose le header */
+        height: 100px;
+        /* on donne une hauteur */
+    }
+    header nav {
+        background-color: #fff;
+    }
+    header nav a {
+        background-color: #fff;
+        font-size: 9px;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    header nav a:first-of-type {
+        background-color: #fff;
+    }
+    /* partie principale */
+    h3 {
+        margin: 40px auto !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 1rem;
+    }
+    .row p {
+        font-size: 13px;
+    }
+    .article1 {
+        width: 100% !important;
+    }
+    header nav a:hover {
+        background-color: var(--gris-p-h3);
+        color: white;
+    }
+    /* formulaire */
+    .new {
+        width: 100% !important;
+        text-align: center;
+    }
+    .new h3 {
+        font-size: 1.3rem !important;
+    }
+    /* style */
+}
